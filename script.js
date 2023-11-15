@@ -2,12 +2,14 @@ alert("Olá, vamos ver os heróis mais fortes da galáxia!!!")
 
 let opcao = prompt("Vamos adicionar os heróis?")
 
+let herois = " "
+
 while(opcao.toLowerCase() === "sim"){
 
     let classe = " "
     let nomeHeroi = " "
     let xp = 0
-
+    
     nomeHeroi = prompt("Qual nome do herói?")
     xp = prompt("Qual XP do herói?")
 
@@ -28,9 +30,13 @@ while(opcao.toLowerCase() === "sim"){
     }else if(xp > 10000){
         classe = "Radiante"
     }
+
     alert(`O ${nomeHeroi} tem ${xp} de XP e é da classe ${classe}`)
     opcao = prompt("Deseja adicionar mais heróis? (Sim/Não)");
+    herois += `${nomeHeroi} - XP: ${xp}, Classe: ${classe}\n`;
 }
+alert("Lista de Heróis Adicionados:\n" + herois);
+
 
 
 
